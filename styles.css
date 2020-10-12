@@ -1,0 +1,645 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* navigation style */
+
+nav{
+  background-color: #000;
+  background-clip: content-box;
+  background-position: center;
+  background-size: auto;
+}
+
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+
+nav .logo{
+  float: none;
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+}
+nav ul{
+  float: none;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li{
+  float: left;
+  display: inline-block;
+  background: none;
+  margin: 0 5px;
+  text-transform: lowercase;
+  
+}
+nav ul li a{
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: gray;
+  border-radius: 5px;
+ 
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+
+nav ul ul ul{
+  border-top: none;
+}
+
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+
+.show,.icon,input{
+  display: none;
+}
+
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+/* general elements */
+
+body{
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  color: #F9F9F9;
+  font-family: Montserrat;
+}
+
+h2 {
+  font-family: 'Cabin';
+  font-size: 24px;
+  text-align: center;
+  font-family: Cabin;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+}
+
+h3 {
+  margin-bottom: 4px;
+  font-family: Cabin;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+a {
+  color: #F9F9F9;
+  text-decoration: none;
+}
+
+
+/* Buttons general style */
+
+.solidButton {
+  color: #000;
+  background: #F9F9F9;
+}
+
+.lineButton {
+  margin: 24px auto  24px auto;
+  color: #F9F9F9;
+  background-color: #000;
+  border: solid 1px #F9F9F9;
+}
+
+.lineButton:hover {
+  background-color: #f9f9f973;
+  color: #000;
+  animation-name: lineButtonHover;
+  animation-duration: 0.3s;
+}
+
+@keyframes lineButtonHover {
+  from {background-color: transparent;}
+  to {background-color: #f9f9f973;}
+}
+
+button {
+  text-align: center;
+  font-family: Cabin;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  height: auto;
+  width: auto;
+  padding: 16px 32px;
+  display: block;
+  cursor: pointer;
+  outline: none; 
+}
+
+.upbutton {
+  position: fixed;
+  bottom: 16px;
+  left: 47.4%;
+  background-color: transparent;
+  padding: 16px 24px;
+  
+}
+
+/* Contact form */
+
+form {
+  margin: 0 16px 0 16px;
+
+}
+
+.contactText {
+  text-align: center;
+  margin:  8px 24px 24px 24px;
+  color: #C4C4C4;
+  
+}
+
+label {
+  font-family: Montserrat;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+form input , select, textarea {
+  display: inline-block;
+  background-color: #000;
+  color: #F9F9F9;
+  font-family: 'Montserrat';
+  font-size: 24px;
+  width: 95%;
+  height: 40px;
+  padding: 4px 8px;
+  border: none;
+  border-bottom: 1px solid #F9F9F9;
+  margin: 4px 0 8px;
+  display: inline-block;
+}
+
+select {
+  width: 98%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+-webkit-text-fill-color:  #F9F9F9;
+-webkit-box-shadow: 0 0 0px 1000px #000 inset;
+transition: background-color 5000s ease-in-out 0s;
+}
+select:required:invalid {
+color: #bcc2c2;
+}
+
+input[type=text]:focus {
+  outline: none;
+  background: #1D1D1D;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+select:focus {
+outline: none;
+
+}
+
+/* Gallery  */
+
+.workContainer {
+  margin-top: 16px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.workGal {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.galLink {
+  width: 50%;
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center center; 
+  min-height: 169px;
+  min-width: 301px;
+}
+
+.textInfo {
+  margin: auto;
+}
+
+ .descriptionHover {
+  color: transparent;
+
+}
+
+/* .descriptionHover:hover {
+  animation-name: descriptionHoverAnimation;
+  animation-duration: 0.3s;
+  color: #F9F9F9;
+}  */
+
+@keyframes descriptionHoverAnimation {
+  from {color: transparent;}
+  to {color: #F9F9F9;}
+}
+
+.descriptionHoverAnimation{
+  animation-name: descriptionHoverAnimation;
+  animation-duration: 0.3s;
+  color: #F9F9F9;
+}
+
+
+.projectInfo {
+  margin: auto;
+}
+
+
+/* HOMEPAGE */
+
+
+.homepage {
+  background-image: url("AlexRapp-final1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Jaldi", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-homepage {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  opacity: 75%;
+}
+
+.subtitle-homepage {
+  font-size: 38px;
+  display: flex;
+  justify-content: center;
+  opacity: 75%;
+}
+
+/* Arrow */
+
+.nextpagebutton {
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  right: 49.69%;
+  top: 88%;
+  bottom: 6.24%;
+  opacity: 60%;
+}
+
+/* others */
+
+.hambut {
+  display: none;
+}
+
+.callforaction {
+  display: none;
+}
+
+#homeworks {
+  display: none;
+}
+
+.homeContact {
+  display: none;
+}
+
+.footerflex {
+  display: none;
+}
+
+/* INNER MOVIE */
+
+.inner-movie {
+  background-color: black;
+  color: white;
+  font-family: "Jaldi", sans-serif;
+}
+
+#timeLocation {
+  opacity: 60%;
+}
+
+/* 
+//
+//
+footer styles :
+*/
+#idFooter {
+  background-clip: content-box;
+  background-position: center;
+  background-size: auto;
+}
+
+
+/* 
+//
+//
+home page text sample :
+*/
+#idHomeText {
+  width: 70%;
+  min-width: 350px;
+  margin: auto;
+  text-align: left;
+  text-justify: newspaper;
+  text-align: justify;
+  padding: 1rem;
+}
+
+/* 
+//
+//
+fixed gap between gallery and nav :
+*/
+.mainGallery {
+margin-top: -16px;
+}
+
+
+hr {
+  display: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  
+}
+
+/*  
+//
+//
+logo on all pages:
+*/
+#idLogoText {
+  float: right;
+  padding-right: 1.3rem;
+  padding-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: white;
+
+}
+
+
+
+/* Responsive */
+
+/* mobile screen */
+
+@media only screen and (max-width: 767px) {
+  .workGal {
+      width: 100%;
+      height: 211px;
+  }
+  .workContainer {
+      display: block;
+  }
+  .descriptionHover {
+      display: inline;
+  }
+
+  /* responsive navigation */
+
+  nav ul{
+    margin-right: 0px;
+    float: left; 
+    }
+
+    nav .logo{
+      padding-left: 30px;
+      width: 100%;
+      
+    }
+    .show + a, ul{
+      display: none;
+      
+    }
+    nav ul li,nav ul ul li{
+      display: block;
+      width: 100%;
+      
+    }
+    nav ul li a:hover{
+      box-shadow: none;
+    }
+    .show{
+      display: block;
+      color: white;
+      font-size: 18px;
+      padding: 0 20px;
+      line-height: 70px;
+      cursor: pointer;
+    }
+    .show:hover{
+      color: cyan;
+    }
+    .icon{
+      display: block;
+      color: white;
+      position: static;
+      top: 0;
+      line-height: 70px;
+      font-size: 25px;
+      margin-left: 20px;
+    }
+    nav ul ul{
+      top: 70px;
+      border-top: 0px;
+      float: none;
+      position: static;
+      display: none;
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    
+    [id^=btn]:checked + ul{
+      display: block;
+  
+    }
+    nav ul ul li{
+      border-bottom: 0px;
+    }
+  
+    nav ul li{
+      margin-top: -20px;
+    }
+}
+
+@media (min-width: 1281px) {
+
+  .galLink {
+      min-height: 400px;
+  }
+  
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  .galLink {
+      min-height: 345px;
+  }
+  
+  
+}
+
+@media (min-width: 1025px) {
+  .formContainer {
+      display: flex;
+  }
+  .formBox {
+      padding: 16px;
+      width: 50%;
+  }
+  form {
+      max-width: 1150px;
+      margin: auto;
+  }
+  textarea {
+      border: solid 1px #F9F9F9;
+      height: 251px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .workGal {
+      width: 100%;
+      height: 431px;
+
+  }
+  .workContainer {
+      display: block;
+  }
+  .descriptionHover {
+      display: block;
+  }
+  
+}
+
+
+/* 
+//
+//
+footer styles :
+*/
+/* #idFooter {
+  
+} */
+
+
+/* 
+//
+//
+home page text sample :
+*/
+#idHomeText {
+  width: 70%;
+  min-width: 350px;
+  margin: auto;
+  text-align: left;
+  text-justify: newspaper;
+  text-align: justify;
+  padding: 1rem;
+}
+
+/* 
+//
+//
+fixed gap between gallery and nav :
+*/
+.mainGallery {
+margin-top: -16px;
+}
+
+
+hr {
+  display: none;
+}
