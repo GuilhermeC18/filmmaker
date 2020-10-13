@@ -5,115 +5,111 @@
 
 /* navigation style */
 
-nav{
-  background-color: #000;
-  background-clip: content-box;
-  background-position: center;
-  background-size: auto;
+nav {
+  background-color: transparent;
+  background-position: top;
 }
 
-nav:after{
-  content: '';
+nav:after {
+  content: "";
   clear: both;
   display: table;
 }
 
-nav .logo{
-  float: none;
+nav .logo {
+  float: inline-start;
   color: white;
   font-size: 27px;
   font-weight: 600;
   line-height: 70px;
   padding-left: 60px;
 }
-nav ul{
+nav ul {
   float: none;
   margin-right: 40px;
   list-style: none;
-  position: relative;
+  position: absolute;
 }
 
-nav ul li{
+nav ul li {
   float: left;
   display: inline-block;
   background: none;
   margin: 0 5px;
   text-transform: lowercase;
-  
 }
-nav ul li a{
+nav ul li a {
   color: white;
   line-height: 70px;
   text-decoration: none;
   font-size: 18px;
   padding: 8px 15px;
 }
-nav ul li a:hover{
+nav ul li a:hover {
   color: gray;
   border-radius: 5px;
- 
 }
-nav ul ul li a:hover{
+nav ul ul li a:hover {
   box-shadow: none;
 }
-nav ul ul{
+nav ul ul {
   position: absolute;
   top: 90px;
   border-top: 3px solid cyan;
   opacity: 0;
   visibility: hidden;
-  transition: top .3s;
+  transition: top 0.3s;
 }
 
-nav ul ul ul{
+nav ul ul ul {
   border-top: none;
 }
 
-nav ul li:hover > ul{
+nav ul li:hover > ul {
   top: 70px;
   opacity: 1;
   visibility: visible;
 }
 
-nav ul ul li{
+nav ul ul li {
   position: relative;
   margin: 0px;
   width: 150px;
   float: none;
   display: list-item;
-  border-bottom: 1px solid rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-nav ul ul li a{
+nav ul ul li a {
   line-height: 50px;
 }
-nav ul ul ul li{
+nav ul ul ul li {
   position: relative;
   top: -60px;
   left: 150px;
 }
 
-.show,.icon,input{
+.show,
+.icon,
+input {
   display: none;
 }
 
-.fa-plus{
+.fa-plus {
   font-size: 15px;
   margin-left: 40px;
 }
 
-/* general elements */
-
-body{
+general elements body {
   height: 100%;
   width: 100%;
   background-color: #000;
-  color: #F9F9F9;
+  color: #f9f9f9;
   font-family: Montserrat;
 }
 
 h2 {
-  font-family: 'Cabin';
+  font-family: "Cabin";
   font-size: 24px;
   text-align: center;
   font-family: Cabin;
@@ -135,23 +131,23 @@ h3 {
 }
 
 a {
-  color: #F9F9F9;
+  color: #f9f9f9;
   text-decoration: none;
 }
-
+*/
 
 /* Buttons general style */
 
 .solidButton {
   color: #000;
-  background: #F9F9F9;
+  background: #f9f9f9;
 }
 
 .lineButton {
-  margin: 24px auto  24px auto;
-  color: #F9F9F9;
+  margin: 24px auto 24px auto;
+  color: #f9f9f9;
   background-color: #000;
-  border: solid 1px #F9F9F9;
+  border: solid 1px #f9f9f9;
 }
 
 .lineButton:hover {
@@ -162,8 +158,12 @@ a {
 }
 
 @keyframes lineButtonHover {
-  from {background-color: transparent;}
-  to {background-color: #f9f9f973;}
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: #f9f9f973;
+  }
 }
 
 button {
@@ -180,7 +180,7 @@ button {
   padding: 16px 32px;
   display: block;
   cursor: pointer;
-  outline: none; 
+  outline: none;
 }
 
 .upbutton {
@@ -189,21 +189,18 @@ button {
   left: 47.4%;
   background-color: transparent;
   padding: 16px 24px;
-  
 }
 
 /* Contact form */
 
 form {
   margin: 0 16px 0 16px;
-
 }
 
 .contactText {
   text-align: center;
-  margin:  8px 24px 24px 24px;
-  color: #C4C4C4;
-  
+  margin: 8px 24px 24px 24px;
+  color: #c4c4c4;
 }
 
 label {
@@ -214,20 +211,21 @@ label {
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
-
 }
 
-form input , select, textarea {
+form input,
+select,
+textarea {
   display: inline-block;
   background-color: #000;
-  color: #F9F9F9;
-  font-family: 'Montserrat';
+  color: #f9f9f9;
+  font-family: "Montserrat";
   font-size: 24px;
   width: 95%;
   height: 40px;
   padding: 4px 8px;
   border: none;
-  border-bottom: 1px solid #F9F9F9;
+  border-bottom: 1px solid #f9f9f9;
   margin: 4px 0 8px;
   display: inline-block;
 }
@@ -237,7 +235,7 @@ select {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -245,17 +243,17 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
--webkit-text-fill-color:  #F9F9F9;
--webkit-box-shadow: 0 0 0px 1000px #000 inset;
-transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #f9f9f9;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 select:required:invalid {
-color: #bcc2c2;
+  color: #bcc2c2;
 }
 
-input[type=text]:focus {
+input[type="text"]:focus {
   outline: none;
-  background: #1D1D1D;
+  background: #1d1d1d;
 }
 
 textarea:focus {
@@ -263,8 +261,7 @@ textarea:focus {
 }
 
 select:focus {
-outline: none;
-
+  outline: none;
 }
 
 /* Gallery  */
@@ -289,9 +286,9 @@ outline: none;
 
 .galLink {
   width: 50%;
-  background-size: cover;                      
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center; 
+  background-position: center center;
   min-height: 169px;
   min-width: 301px;
 }
@@ -300,9 +297,8 @@ outline: none;
   margin: auto;
 }
 
- .descriptionHover {
+.descriptionHover {
   color: transparent;
-
 }
 
 /* .descriptionHover:hover {
@@ -312,24 +308,30 @@ outline: none;
 }  */
 
 @keyframes descriptionHoverAnimation {
-  from {color: transparent;}
-  to {color: #F9F9F9;}
+  from {
+    color: transparent;
+  }
+  to {
+    color: #f9f9f9;
+  }
 }
 
-.descriptionHoverAnimation{
+.descriptionHoverAnimation {
   animation-name: descriptionHoverAnimation;
   animation-duration: 0.3s;
-  color: #F9F9F9;
+  color: #f9f9f9;
 }
-
 
 .projectInfo {
   margin: auto;
 }
 
-
 /* HOMEPAGE */
 
+html,
+body {
+  height: 100%;
+}
 
 .homepage {
   background-image: url("AlexRapp-final1.png");
@@ -413,7 +415,6 @@ footer styles :
   background-size: auto;
 }
 
-
 /* 
 //
 //
@@ -435,21 +436,19 @@ home page text sample :
 fixed gap between gallery and nav :
 */
 .mainGallery {
-margin-top: -16px;
+  margin-top: -16px;
 }
-
 
 hr {
   display: none;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
   margin: 0;
   padding: 0;
   user-select: none;
   box-sizing: border-box;
-  
 }
 
 /*  
@@ -464,10 +463,7 @@ logo on all pages:
   font-size: 1.6rem;
   font-weight: bolder;
   color: white;
-
 }
-
-
 
 /* Responsive */
 
@@ -475,135 +471,123 @@ logo on all pages:
 
 @media only screen and (max-width: 767px) {
   .workGal {
-      width: 100%;
-      height: 211px;
+    width: 100%;
+    height: 211px;
   }
   .workContainer {
-      display: block;
+    display: block;
   }
   .descriptionHover {
-      display: inline;
+    display: inline;
   }
 
   /* responsive navigation */
 
-  nav ul{
+  nav ul {
     margin-right: 0px;
-    float: left; 
-    }
+    float: left;
+  }
 
-    nav .logo{
-      padding-left: 30px;
-      width: 100%;
-      
-    }
-    .show + a, ul{
-      display: none;
-      
-    }
-    nav ul li,nav ul ul li{
-      display: block;
-      width: 100%;
-      
-    }
-    nav ul li a:hover{
-      box-shadow: none;
-    }
-    .show{
-      display: block;
-      color: white;
-      font-size: 18px;
-      padding: 0 20px;
-      line-height: 70px;
-      cursor: pointer;
-    }
-    .show:hover{
-      color: cyan;
-    }
-    .icon{
-      display: block;
-      color: white;
-      position: static;
-      top: 0;
-      line-height: 70px;
-      font-size: 25px;
-      margin-left: 20px;
-    }
-    nav ul ul{
-      top: 70px;
-      border-top: 0px;
-      float: none;
-      position: static;
-      display: none;
-      opacity: 1;
-      visibility: visible;
-    }
-  
-    
-    [id^=btn]:checked + ul{
-      display: block;
-  
-    }
-    nav ul ul li{
-      border-bottom: 0px;
-    }
-  
-    nav ul li{
-      margin-top: -20px;
-    }
+  nav .logo {
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a,
+  ul {
+    display: none;
+  }
+  nav ul li,
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover {
+    box-shadow: none;
+  }
+  .show {
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover {
+    color: cyan;
+  }
+  .icon {
+    display: block;
+    color: white;
+    position: static;
+    top: 0;
+    line-height: 70px;
+    font-size: 25px;
+    margin-left: 20px;
+  }
+  nav ul ul {
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  [id^="btn"]:checked + ul {
+    display: block;
+  }
+  nav ul ul li {
+    border-bottom: 0px;
+  }
+
+  nav ul li {
+    margin-top: -20px;
+  }
 }
 
 @media (min-width: 1281px) {
-
   .galLink {
-      min-height: 400px;
+    min-height: 400px;
   }
-  
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-
   .galLink {
-      min-height: 345px;
+    min-height: 345px;
   }
-  
-  
 }
 
 @media (min-width: 1025px) {
   .formContainer {
-      display: flex;
+    display: flex;
   }
   .formBox {
-      padding: 16px;
-      width: 50%;
+    padding: 16px;
+    width: 50%;
   }
   form {
-      max-width: 1150px;
-      margin: auto;
+    max-width: 1150px;
+    margin: auto;
   }
   textarea {
-      border: solid 1px #F9F9F9;
-      height: 251px;
+    border: solid 1px #f9f9f9;
+    height: 251px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
   .workGal {
-      width: 100%;
-      height: 431px;
-
+    width: 100%;
+    height: 431px;
   }
   .workContainer {
-      display: block;
+    display: block;
   }
   .descriptionHover {
-      display: block;
+    display: block;
   }
-  
 }
-
 
 /* 
 //
@@ -613,7 +597,6 @@ footer styles :
 /* #idFooter {
   
 } */
-
 
 /* 
 //
@@ -636,9 +619,8 @@ home page text sample :
 fixed gap between gallery and nav :
 */
 .mainGallery {
-margin-top: -16px;
+  margin-top: -16px;
 }
-
 
 hr {
   display: none;

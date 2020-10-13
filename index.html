@@ -8,6 +8,30 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="stylesNavBar.css" />
     <link
@@ -16,26 +40,37 @@
     />
   </head>
   <body class="homepage">
-    <nav>
-      <label for="btn" class="icon">
-        <span class="fa fa-bars"></span>
-      </label>
-      <input type="checkbox" id="btn" />
-
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">contact</a></li>
+ 
+    <!-- NavBar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark topbar">
+      <a class="navbar-brand" href=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="navbar-brand" href="gallery.html">
+          Works  </a>  
+          </li>
+          <li class="nav-item">
+              <a class="navbar-brand" href="about.html">
+          About   </a>
+          </li>
+          <li class="nav-item">
+              <a class="navbar-brand" href="contact.html">
+          Contact   </a>
+          </li>
       </ul>
-    </nav>
+      </div>
+  </nav>
+      </div>
+    </div>
 
     <main>
-      <header>
-        <h1 class="title-homepage">Filmmaker</h1>
-        <br />
-        <h2 class="subtitle-homepage">Guilherme Caeiro</h2>
-      </header>
+      <h1 class="title-homepage">Filmmaker</h1>
+      <br />
+      <h2 class="subtitle-homepage">Guilherme Caeiro</h2>
       <a><img class="nextpagebutton" src="arrow.png" /></a>
     </main>
 
