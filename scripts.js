@@ -1,9 +1,4 @@
-//
-//
-// edit logo text :
-//
-const paragraph = document.getElementById("idLogoText");
-paragraph.textContent += "Guilherme Caeiro";
+
 
 //
 //
@@ -22,7 +17,7 @@ const picArray = [
     location: "Berlin",
     year: "2020",
     picture: "KingMidasSound.jpg",
-    page: "kingmidas-innvermovie.html",
+    page: "kingmidas-innermovie.html",
   },
   {
     name: "Local Suicide - Already There",
@@ -57,7 +52,7 @@ const picArray = [
     location: "Berlin",
     year: "2020",
     picture: "content/pictures/KingMidasSound.jpg",
-    page: "innermovie.html",
+    page: "Live-Editing-innermovie.html",
   },
   {
     name: "Fiction Showreel",
@@ -106,7 +101,8 @@ function buildGallery(array) {
       array[i].name,
       array[i].location,
       array[i].year,
-      array[i].picture
+      array[i].picture,
+      array[i].page
     );
 
     //  hovers in gallery -
@@ -174,9 +170,6 @@ function topFunction() {
 //
 //
 
-$(".icon").click(function () {
-  $("span").toggleClass("cancel");
-});
 
 //
 //
