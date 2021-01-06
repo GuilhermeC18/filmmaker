@@ -109,13 +109,13 @@ function buildGallery(array) {
     const movieHover = document.querySelectorAll(".workGal");
     movieHover[i].addEventListener("mouseenter", function (event) {
       const descriptionHover = movieHover[i].querySelector(".descriptionHover");
-      console.log(descriptionHover);
+      //console.log(descriptionHover);
       descriptionHover.classList.add("descriptionHoverAnimation");
     });
     movieHover[i].addEventListener("mouseleave", function (event) {
-      const descriptionHover = movieHover[i].querySelector("descriptionHover");
-      descriptionHover.classList.remove(".descriptionHoverAnimation");
-      console.log(descriptionHover);
+      const descriptionHover = movieHover[i].querySelector(".descriptionHover");
+      descriptionHover.classList.remove("descriptionHoverAnimation");
+      //console.log(descriptionHover);
     });
   }
 }

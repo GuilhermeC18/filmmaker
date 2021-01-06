@@ -5,6 +5,40 @@
 
 /* Buttons general style */
 
+p {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-family: Cabin;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+small {
+  font-family: Montserrat;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
 .solidButton {
   color: #000;
   background: #f9f9f9;
@@ -18,7 +52,7 @@
 }
 
 .lineButton:hover {
-  background-color: #f9f9f973;
+  background-color: #ffffffb0;
   color: #000;
   animation-name: lineButtonHover;
   animation-duration: 0.3s;
@@ -29,7 +63,7 @@
     background-color: transparent;
   }
   to {
-    background-color: #f9f9f973;
+    background-color: #f9f9f993;
   }
 }
 
@@ -101,9 +135,9 @@ textarea {
   display: inline-block;
 }
 
-select {
+/* select {
   width: 98%;
-}
+} */
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -155,11 +189,18 @@ select:focus {
   background-position: center center;
 }
 
-.galLink {
-  width: 50%;
+.workGal:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background: rgba(0, 0, 0, 0.349);
+}
+
+.galLink {
+  width: 50%;
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; */
   min-height: 169px;
   min-width: 301px;
   color: white;
@@ -177,11 +218,11 @@ select:focus {
   color: transparent;
 }
 
-/* .descriptionHover:hover {
+.descriptionHover:hover {
   animation-name: descriptionHoverAnimation;
   animation-duration: 0.3s;
-  color: #F9F9F9;
-}  */
+  color: #f9f9f9;
+}
 
 @keyframes descriptionHoverAnimation {
   from {
@@ -224,29 +265,26 @@ body {
 }
 
 .title-homepage {
+  text-align: center;
   font-size: 25px;
-  display: flex;
-  justify-content: center;
-  opacity: 75%;
+  opacity: 85%;
 }
 
 .subtitle-homepage {
+  text-align: center;
   font-size: 38px;
-  display: flex;
-  justify-content: center;
   opacity: 75%;
 }
 
 /* Arrow */
 
 .nextpagebutton {
-  height: 60px;
+  transform: rotate(180deg);
   position: absolute;
   left: 50%;
   right: 49.69%;
   top: 88%;
   bottom: 6.24%;
-  opacity: 60%;
 }
 
 /* others */
@@ -267,9 +305,9 @@ body {
   display: none;
 }
 
-.footerflex {
+/* .footerflex {
   display: none;
-}
+} */
 
 /* INNER MOVIE */
 
@@ -284,14 +322,60 @@ body {
 }
 
 /* 
-//
-//
 footer styles :
 */
-#idFooter {
+footer {
+  text-align: center;
+  width: 100%;
   background-clip: content-box;
   background-position: center;
   background-size: auto;
+  position: absolute;
+  bottom: 10px;
+}
+
+/* will be moved to the css file got it from https://www.w3schools.com/howto/howto_css_social_media_buttons.asp */
+
+.fa {
+  padding: 9px 0;
+  font-size: 20px;
+  width: 41px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50px;
+  background: rgb(196, 196, 196);
+  color: black;
+}
+
+.fa-instagram:hover {
+  background: #125688;
+  color: white;
+}
+.fa-twitter:hover {
+  background: #55acee;
+  color: white;
+}
+.fa-linkedin:hover {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube:hover {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram:hover {
+  background: #125688;
+  color: white;
+}
+.fa-vimeo:hover {
+  background: #45bbff;
+  color: white;
+}
+.galFotter {
+  bottom: -670px;
 }
 
 /* 
@@ -318,9 +402,9 @@ fixed gap between gallery and nav :
   margin-top: -16px;
 }
 
-hr {
+/* hr {
   display: none;
-}
+} */
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 * {
@@ -346,19 +430,6 @@ logo on all pages:
 
 /* Responsive */
 
-/* mobile screen */
-
-@media only screen and (max-width: 767px) {
-  .workGal {
-    width: 100%;
-    height: 211px;
-  }
-  .workContainer {
-    display: block;
-  }
-  .descriptionHover {
-    display: inline;
-  }
 
   /* responsive navigation */
 
@@ -423,58 +494,6 @@ logo on all pages:
   }
 }
 
-@media (min-width: 1281px) {
-  .galLink {
-    min-height: 400px;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .galLink {
-    min-height: 345px;
-  }
-}
-
-@media (min-width: 1025px) {
-  .formContainer {
-    display: flex;
-  }
-  .formBox {
-    padding: 16px;
-    width: 50%;
-  }
-  form {
-    max-width: 1150px;
-    margin: auto;
-  }
-  textarea {
-    border: solid 1px #f9f9f9;
-    height: 251px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .workGal {
-    width: 100%;
-    height: 431px;
-  }
-  .workContainer {
-    display: block;
-  }
-  .descriptionHover {
-    display: block;
-  }
-}
-
-/* 
-//
-//
-footer styles :
-*/
-/* #idFooter {
-  
-} */
-
 /* 
 //
 //
@@ -495,10 +514,86 @@ home page text sample :
 //
 fixed gap between gallery and nav :
 */
-.mainGallery {
+/* .mainGallery {
   margin-top: -16px;
 }
 
 hr {
   display: none;
+} */
+
+@media (min-width: 1281px) {
+  .galLink {
+    min-height: 400px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .galLink {
+    min-height: 345px;
+  }
+  .galFotter {
+    bottom: -870px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .formContainer {
+    display: flex;
+  }
+  .formBox {
+    padding: 16px;
+    width: 50%;
+  }
+  form {
+    max-width: 1150px;
+    margin: auto;
+  }
+  textarea {
+    border: solid 1px #f9f9f9;
+    height: 251px;
+  }
+  .galFotter {
+    bottom: -870px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .workGal {
+    width: 100%;
+    height: 431px;
+  }
+  .workContainer {
+    display: block;
+  }
+  .descriptionHover {
+    display: block;
+  }
+  .galFotter {
+    bottom: -870px;
+  }
+  .upbutton {
+    left: 42%;
+  }
+}
+
+/* mobile screen */
+
+@media only screen and (max-width: 767px) {
+  .workGal {
+    width: 100%;
+    height: 211px;
+  }
+  .workContainer {
+    display: block;
+  }
+  .descriptionHover {
+    display: inline;
+  }
+  .galFotter {
+    bottom: -1000px;
+  }
+  .upbutton {
+    left: 42%;
+  }
 }
